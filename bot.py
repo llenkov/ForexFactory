@@ -11,7 +11,6 @@ import json
 # ─── КОНФИГУРАЦИЯ ───────────────────────────────────────────────────────────────
 DISCORD_TOKEN   = os.getenv("DISCORD_TOKEN")
 CHANNEL_ID      = int(os.getenv("CHANNEL_ID"))
-
 # Час на публикуване всеки ден (UTC)
 DAILY_POST_TIME = time(hour=0, minute=1, tzinfo=timezone.utc)
 # ─────────────────────────────────────────────────────────────────────────────────
@@ -262,6 +261,30 @@ async def reset_sent(ctx):
     await ctx.send("✅ Кешът с изпратените събития е изчистен.")
 
 
+# ─── МИНИМАЛЕН HTTP СЪРВЪР (за Render Web Service) ───────────────────────────────
+# Render изисква услугата да слуша на порт — тази функция стартира
+# лек aiohttp сървър само за да мине health check-а.
+
+from aiohttp import web as aio_web
+
+async def health(request):
+    return aio_web.Response(text="OK")
+
+async def start_http_server():
+    app = aio_web.Application()
+    app.router.add_get("/", health)
+    runner = aio_web.AppRunner(app)
+    await runner.setup()
+    port = int(os.environ.get("PORT", 8080))
+    site = aio_web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    print(f"✅ HTTP health-check сървър стартиран на порт {port}")
+
 # ─── START ────────────────────────────────────────────────────────────────────────
+async def main():
+    async with bot:
+        await start_http_server()
+        await bot.start(DISCORD_TOKEN)
+
 if __name__ == "__main__":
-    bot.run(DISCORD_TOKEN)
+    asyncio.run(main())
