@@ -6,28 +6,28 @@ import asyncio
 import xml.etree.ElementTree as ET
 import os
 import json
-from collections import defaultdict, Counter
+from collections import defaultdict
 
 # ─── КОНФИГУРАЦИЯ ───────────────────────────────────────────────────────────────
 DISCORD_TOKEN   = os.getenv("DISCORD_TOKEN")
 CHANNEL_ID      = int(os.getenv("CHANNEL_ID"))
-WEEKLY_POST_TIME = time(hour=0, minute=1, tzinfo=timezone.utc)
+# ⚠️ Смени с твоето GitHub username и repo name!
+GITHUB_USER    = "llenkov"
+GITHUB_REPO    = "ForexFactory"
+
+# Raw URL към forex_calendar.xml в твоето GitHub репо
+# Пример: https://raw.githubusercontent.com/lenkov/forex-bot/main/forex_calendar.xml
+CALENDAR_URL   = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/main/forex_calendar.xml"
+
+# Бота публикува всеки понеделник в 00:45 UTC
+# (след като GitHub Action е свалила XML в 00:30 UTC)
+WEEKLY_POST_TIME = time(hour=0, minute=45, tzinfo=timezone.utc)
 # ─────────────────────────────────────────────────────────────────────────────────
 
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://www.forexfactory.com/",
+    "User-Agent": "Mozilla/5.0",
+    "Cache-Control": "no-cache",   # Винаги вземаме свежата версия
 }
-
-FF_XML_URLS = [
-    "https://nfs.faireconomy.media/ff_calendar_thisweek.xml",
-    "https://www.forexfactory.com/ff_calendar_thisweek.xml",
-]
 
 SENT_FILE = "sent_events.json"
 
@@ -45,53 +45,44 @@ def save_sent(sent: set):
 
 
 def impact_color(impact: str) -> int:
-    if impact == "red":
-        return 0xFF0000
-    if impact == "orange":
-        return 0xFF8C00
+    if impact == "red":    return 0xFF0000
+    if impact == "orange": return 0xFF8C00
     return 0x808080
 
 
 def impact_emoji(impact: str) -> str:
-    if impact == "red":
-        return "🔴"
-    if impact == "orange":
-        return "🟠"
+    if impact == "red":    return "🔴"
+    if impact == "orange": return "🟠"
     return "⚪"
 
 
-async def fetch_xml() -> tuple[str | None, str | None]:
-    """Опитва всички URL-и и връща (xml_text, url) при успех."""
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
-        for url in FF_XML_URLS:
-            try:
-                async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-                    print(f"[DEBUG] GET {url} → {resp.status}")
-                    if resp.status == 200:
-                        text = await resp.text(encoding="utf-8")
-                        print(f"[DEBUG] Получени {len(text)} байта")
-                        return text, url
-                    else:
-                        body = await resp.text()
-                        print(f"[WARN] {url} → {resp.status}: {body[:100]}")
-            except Exception as e:
-                print(f"[WARN] {url} грешка: {e}")
-    return None, None
-
-
 async def fetch_calendar() -> list[dict]:
+    """Сваля XML от GitHub и връща важните събития за седмицата."""
     events = []
-    xml_text, _ = await fetch_xml()
-    if not xml_text:
-        return events
+
+    async with aiohttp.ClientSession(headers=HEADERS) as session:
+        try:
+            async with session.get(CALENDAR_URL, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+                print(f"[DEBUG] GitHub raw XML → {resp.status}")
+                if resp.status != 200:
+                    body = await resp.text()
+                    print(f"[ERROR] Статус {resp.status}: {body[:100]}")
+                    return events
+                xml_text = await resp.text(encoding="utf-8")
+                print(f"[DEBUG] Получени {len(xml_text)} байта")
+        except Exception as e:
+            print(f"[ERROR] fetch_calendar: {e}")
+            return events
 
     try:
         root = ET.fromstring(xml_text)
     except ET.ParseError as e:
-        print(f"[ERROR] XML парсване: {e}")
+        print(f"[ERROR] XML парсване: {e}\nПърви 300 символа: {xml_text[:300]}")
         return events
 
+    all_count = 0
     for ev in root.findall("event"):
+        all_count += 1
         impact_raw = ev.findtext("impact", "").strip().lower()
         if impact_raw == "high":
             impact = "red"
@@ -111,6 +102,7 @@ async def fetch_calendar() -> list[dict]:
         try:
             parsed_date = datetime.strptime(date_str, "%b %d, %Y")
         except ValueError:
+            print(f"[WARN] Не мога да парсна дата: '{date_str}'")
             parsed_date = datetime.min
 
         events.append({
@@ -126,6 +118,7 @@ async def fetch_calendar() -> list[dict]:
             "actual":      actual,
         })
 
+    print(f"[DEBUG] Общо {all_count} събития в XML, {len(events)} важни (high/medium)")
     events.sort(key=lambda e: e["date_parsed"])
     return events
 
@@ -175,6 +168,7 @@ async def on_ready():
     global sent_events
     sent_events = load_sent()
     print(f"✅ {bot.user} | Канал {CHANNEL_ID}")
+    print(f"📅 XML от: {CALENDAR_URL}")
     weekly_calendar.start()
 
 
@@ -251,20 +245,31 @@ async def forex_now(ctx):
 
 @bot.command(name="debug")
 async def debug_fetch(ctx):
-    """Тества връзката с ForexFactory XML."""
-    msg = await ctx.send("🔍 Тествам връзката...")
-
-    results = []
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
-        for url in FF_XML_URLS:
-            try:
-                async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
-                    body = await resp.text()
-                    results.append(f"**{resp.status}** `{url}`\n> `{body[:80]}`")
-            except Exception as e:
-                results.append(f"**ERR** `{url}`\n> `{e}`")
-
-    await msg.edit(content="📡 **Резултати от връзката:**\n\n" + "\n\n".join(results))
+    """Тества връзката с GitHub XML."""
+    msg = await ctx.send(f"🔍 Тествам `{CALENDAR_URL}`...")
+    try:
+        async with aiohttp.ClientSession(headers=HEADERS) as session:
+            async with session.get(CALENDAR_URL, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+                body = await resp.text()
+                if resp.status == 200:
+                    # Парсни и покажи броя
+                    try:
+                        root   = ET.fromstring(body)
+                        all_ev = root.findall("event")
+                        high   = sum(1 for e in all_ev if e.findtext("impact","").lower() == "high")
+                        medium = sum(1 for e in all_ev if e.findtext("impact","").lower() == "medium")
+                        await msg.edit(content=(
+                            f"✅ **Връзката работи!**\n"
+                            f"📦 Размер: `{len(body)} байта`\n"
+                            f"📊 Общо събития: `{len(all_ev)}`\n"
+                            f"🔴 High: `{high}`  |  🟠 Medium: `{medium}`"
+                        ))
+                    except ET.ParseError as e:
+                        await msg.edit(content=f"⚠️ Статус 200 но невалиден XML: `{e}`\n```{body[:300]}```")
+                else:
+                    await msg.edit(content=f"❌ Статус `{resp.status}`\n```{body[:200]}```")
+    except Exception as e:
+        await msg.edit(content=f"❌ Грешка: `{e}`")
 
 
 @bot.command(name="reset")
