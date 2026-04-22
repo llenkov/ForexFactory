@@ -11,7 +11,6 @@ from collections import defaultdict
 # ─── КОНФИГУРАЦИЯ ───────────────────────────────────────────────────────────────
 DISCORD_TOKEN   = os.getenv("DISCORD_TOKEN")
 CHANNEL_ID      = int(os.getenv("CHANNEL_ID"))
-# Час на публикуване на седмичния календар (UTC) — всеки понеделник в 00:01
 WEEKLY_POST_TIME = time(hour=0, minute=1, tzinfo=timezone.utc)
 # ─────────────────────────────────────────────────────────────────────────────────
 
@@ -22,10 +21,16 @@ HEADERS = {
         "Chrome/124.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.forexfactory.com/",
 }
 
-FF_XML_URL = "https://www.forexfactory.com/ff_calendar_thisweek.xml"
-SENT_FILE  = "sent_events.json"
+# Опитваме двата URL-а
+FF_XML_URLS = [
+    "https://www.forexfactory.com/ff_calendar_thisweek.xml",
+    "https://nfs.faireconomy.media/ff_calendar_thisweek.xml",  # Алтернативен mirror
+]
+
+SENT_FILE = "sent_events.json"
 
 
 def load_sent() -> set:
@@ -56,46 +61,62 @@ def impact_emoji(impact: str) -> str:
     return "⚪"
 
 
+async def fetch_xml() -> tuple[str | None, str | None]:
+    """
+    Опитва всички FF_XML_URLS и връща (xml_text, url) при успех.
+    Връща (None, None) ако всички се провалят.
+    """
+    async with aiohttp.ClientSession(headers=HEADERS) as session:
+        for url in FF_XML_URLS:
+            try:
+                async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
+                    print(f"[DEBUG] GET {url} → {resp.status}")
+                    if resp.status == 200:
+                        text = await resp.text(encoding="utf-8")
+                        print(f"[DEBUG] Получени {len(text)} байта от {url}")
+                        return text, url
+                    else:
+                        print(f"[WARN] {url} върна {resp.status}")
+            except Exception as e:
+                print(f"[WARN] {url} грешка: {e}")
+    return None, None
+
+
 async def fetch_calendar() -> list[dict]:
-    """
-    Изтегля ForexFactory XML и връща ВСИЧКИ важни (high/medium) събития за седмицата,
-    групирани по дата.
-    """
+    """Изтегля XML и връща важните събития за седмицата."""
     events = []
 
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
-        async with session.get(FF_XML_URL, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-            if resp.status != 200:
-                print(f"[ERROR] ForexFactory XML върна статус {resp.status}")
-                return events
-            xml_text = await resp.text(encoding="utf-8")
+    xml_text, source_url = await fetch_xml()
+    if not xml_text:
+        print("[ERROR] Всички XML URL-и се провалиха.")
+        return events
 
     try:
         root = ET.fromstring(xml_text)
     except ET.ParseError as e:
         print(f"[ERROR] XML парсване неуспешно: {e}")
+        print(f"[DEBUG] Първите 500 символа: {xml_text[:500]}")
         return events
 
+    all_found = 0
     for ev in root.findall("event"):
-        date_str = ev.findtext("date", "").strip()
+        all_found += 1
+        date_str   = ev.findtext("date",     "").strip()
+        impact_raw = ev.findtext("impact",   "").strip().lower()
+        title      = ev.findtext("title",    "Unknown Event").strip()
+        country    = ev.findtext("country",  "N/A").strip()
+        ev_time    = ev.findtext("time",     "").strip()
+        forecast   = ev.findtext("forecast", "").strip()
+        previous   = ev.findtext("previous", "").strip()
+        actual     = ev.findtext("actual",   "").strip()
 
-        # Важност
-        impact_raw = ev.findtext("impact", "").strip().lower()
         if impact_raw == "high":
             impact = "red"
         elif impact_raw == "medium":
             impact = "orange"
         else:
-            continue  # Пропускаме ниска важност
+            continue
 
-        title    = ev.findtext("title",    "Unknown Event").strip()
-        country  = ev.findtext("country",  "N/A").strip()
-        ev_time  = ev.findtext("time",     "").strip()
-        forecast = ev.findtext("forecast", "").strip()
-        previous = ev.findtext("previous", "").strip()
-        actual   = ev.findtext("actual",   "").strip()
-
-        # Парсираме датата за сортиране
         try:
             parsed_date = datetime.strptime(date_str, "%b %d, %Y")
         except ValueError:
@@ -103,7 +124,6 @@ async def fetch_calendar() -> list[dict]:
             parsed_date = datetime.min
 
         event_id = f"{date_str}_{ev_time}_{country}_{title}"
-
         events.append({
             "id":          event_id,
             "date":        date_str,
@@ -117,16 +137,14 @@ async def fetch_calendar() -> list[dict]:
             "actual":      actual,
         })
 
-    # Сортираме по дата
+    print(f"[DEBUG] XML съдържа {all_found} общо събития, {len(events)} важни (high/medium)")
     events.sort(key=lambda e: e["date_parsed"])
     return events
 
 
 def build_embed(ev: dict) -> discord.Embed:
-    """Изгражда Discord Embed за дадено събитие."""
     color = impact_color(ev["impact"])
     emoji = impact_emoji(ev["impact"])
-
     embed = discord.Embed(
         title=f"{emoji} {ev['currency']} — {ev['event']}",
         color=color,
@@ -135,38 +153,28 @@ def build_embed(ev: dict) -> discord.Embed:
     embed.add_field(name="📅 Дата",     value=ev["date"]     or "—", inline=True)
     embed.add_field(name="🕐 Час (ET)", value=ev["time"]     or "—", inline=True)
     embed.add_field(name="💱 Валута",   value=ev["currency"] or "—", inline=True)
-
     if ev["forecast"]:
         embed.add_field(name="📊 Прогноза", value=ev["forecast"], inline=True)
     if ev["previous"]:
         embed.add_field(name="📉 Предишно", value=ev["previous"], inline=True)
     if ev["actual"]:
         embed.add_field(name="✅ Реално",   value=ev["actual"],   inline=True)
-
     embed.set_footer(text="ForexFactory Economic Calendar • forexfactory.com")
     return embed
 
 
 def build_day_header(date_str: str, day_events: list[dict]) -> discord.Embed:
-    """Изгражда хедър embed за даден ден."""
     try:
-        parsed = datetime.strptime(date_str, "%b %d, %Y")
+        parsed   = datetime.strptime(date_str, "%b %d, %Y")
         day_name = parsed.strftime("%A, %d %B %Y")
     except ValueError:
         day_name = date_str
 
     red_count    = sum(1 for e in day_events if e["impact"] == "red")
     orange_count = sum(1 for e in day_events if e["impact"] == "orange")
-
     desc = f"🔴 **High Impact:** {red_count} събитие(я)\n🟠 **Medium Impact:** {orange_count} събитие(я)"
-
-    embed = discord.Embed(
-        title=f"📆 {day_name}",
-        description=desc,
-        color=0x5865F2,
-        timestamp=datetime.now(timezone.utc),
-    )
-    return embed
+    return discord.Embed(title=f"📆 {day_name}", description=desc, color=0x5865F2,
+                         timestamp=datetime.now(timezone.utc))
 
 
 # ─── BOT SETUP ───────────────────────────────────────────────────────────────────
@@ -184,8 +192,7 @@ async def on_ready():
 
 
 async def post_weekly_events(channel: discord.TextChannel):
-    """Изтегля и публикува всички важни събития за седмицата, групирани по ден."""
-    now = datetime.now(timezone.utc)
+    now       = datetime.now(timezone.utc)
     week_start = now.strftime("%d %b")
     print(f"[{now.strftime('%H:%M')} UTC] Публикувам седмичния календар...")
 
@@ -193,7 +200,7 @@ async def post_weekly_events(channel: discord.TextChannel):
         events = await fetch_calendar()
     except Exception as e:
         print(f"[ERROR] fetch_calendar: {e}")
-        await channel.send(f"❌ Грешка при изтегляне на календара: {e}")
+        await channel.send(f"❌ Грешка при изтегляне на календара: `{e}`")
         return
 
     if not events:
@@ -207,7 +214,6 @@ async def post_weekly_events(channel: discord.TextChannel):
         await channel.send(embed=embed)
         return
 
-    # Групираме по дата
     by_day: dict[str, list[dict]] = defaultdict(list)
     for ev in events:
         by_day[ev["date"]].append(ev)
@@ -215,7 +221,6 @@ async def post_weekly_events(channel: discord.TextChannel):
     red_total    = sum(1 for e in events if e["impact"] == "red")
     orange_total = sum(1 for e in events if e["impact"] == "orange")
 
-    # Главен хедър за седмицата
     header = discord.Embed(
         title="📅 Седмичен икономически календар",
         description=(
@@ -231,17 +236,11 @@ async def post_weekly_events(channel: discord.TextChannel):
     await channel.send(embed=header)
     await asyncio.sleep(0.5)
 
-    # Публикуваме ден по ден
     for date_str, day_events in by_day.items():
-        # Хедър за деня
-        day_header = build_day_header(date_str, day_events)
-        await channel.send(embed=day_header)
+        await channel.send(embed=build_day_header(date_str, day_events))
         await asyncio.sleep(0.5)
-
-        # Събитията за деня
         for ev in day_events:
-            embed = build_embed(ev)
-            await channel.send(embed=embed)
+            await channel.send(embed=build_embed(ev))
             sent_events.add(ev["id"])
             await asyncio.sleep(0.8)
 
@@ -251,8 +250,7 @@ async def post_weekly_events(channel: discord.TextChannel):
 
 @tasks.loop(time=WEEKLY_POST_TIME)
 async def weekly_calendar():
-    """Публикува седмичния календар всеки понеделник в 00:01 UTC."""
-    if datetime.now(timezone.utc).weekday() != 0:  # 0 = понеделник
+    if datetime.now(timezone.utc).weekday() != 0:
         return
     channel = bot.get_channel(CHANNEL_ID)
     if channel is None:
@@ -265,22 +263,58 @@ async def weekly_calendar():
 
 @bot.command(name="forex")
 async def forex_now(ctx):
-    """!forex — показва всички важни събития за тази седмица веднага."""
+    """!forex — показва всички важни събития за тази седмица."""
     await ctx.send("⏳ Изтеглям седмичния календар от ForexFactory...")
     await post_weekly_events(ctx.channel)
+
+
+@bot.command(name="debug")
+@commands.has_permissions(administrator=True)
+async def debug_fetch(ctx):
+    """!debug — тества връзката с ForexFactory XML и показва суровия отговор."""
+    await ctx.send("🔍 Тествам връзката с ForexFactory...")
+    xml_text, source_url = await fetch_xml()
+
+    if not xml_text:
+        await ctx.send("❌ **Всички URL-и се провалиха.** Провери Render логовете за подробности.")
+        return
+
+    await ctx.send(f"✅ Успешно изтеглено от: `{source_url}`\n📦 Размер: `{len(xml_text)} байта`")
+
+    # Покажи броя на всички събития в XML-а
+    try:
+        root  = ET.fromstring(xml_text)
+        all_events = root.findall("event")
+        impacts    = [ev.findtext("impact", "").strip() for ev in all_events]
+        from collections import Counter
+        counts = Counter(impacts)
+        summary = "\n".join(f"  `{k}`: {v}" for k, v in counts.items())
+        await ctx.send(f"📊 **Намерени {len(all_events)} събития в XML:**\n{summary}")
+
+        # Покажи първите 5 реда
+        lines = []
+        for ev in all_events[:5]:
+            lines.append(
+                f"• `{ev.findtext('date','')}` | `{ev.findtext('impact','')}` | "
+                f"`{ev.findtext('country','')}` | {ev.findtext('title','')}"
+            )
+        await ctx.send("**Първите 5 събития:**\n" + "\n".join(lines))
+
+    except ET.ParseError as e:
+        await ctx.send(f"❌ XML парсване неуспешно: `{e}`\n```{xml_text[:500]}```")
 
 
 @bot.command(name="reset")
 @commands.has_permissions(administrator=True)
 async def reset_sent(ctx):
-    """!reset — изчиства кеша с изпратените събития (само за администратори)."""
+    """!reset — изчиства кеша с изпратените събития."""
     global sent_events
     sent_events = set()
     save_sent(sent_events)
-    await ctx.send("✅ Кешът с изпратените събития е изчистен.")
+    await ctx.send("✅ Кешът е изчистен.")
 
 
-# ─── МИНИМАЛЕН HTTP СЪРВЪР (за Render Web Service) ───────────────────────────────
+# ─── HTTP СЪРВЪР (за Render) ──────────────────────────────────────────────────────
 from aiohttp import web as aio_web
 
 async def health(request):
@@ -294,7 +328,7 @@ async def start_http_server():
     port = int(os.environ.get("PORT", 8080))
     site = aio_web.TCPSite(runner, "0.0.0.0", port)
     await site.start()
-    print(f"✅ HTTP health-check сървър стартиран на порт {port}")
+    print(f"✅ HTTP сървър стартиран на порт {port}")
 
 
 # ─── START ────────────────────────────────────────────────────────────────────────
