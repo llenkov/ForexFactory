@@ -1,10 +1,9 @@
 import discord
 from discord.ext import commands, tasks
 import aiohttp
-from bs4 import BeautifulSoup
 from datetime import datetime, timezone, time
 import asyncio
-import re
+import xml.etree.ElementTree as ET
 import os
 import json
 
@@ -22,10 +21,10 @@ HEADERS = {
         "Chrome/124.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://www.forexfactory.com/",
 }
 
-FF_URL = "https://www.forexfactory.com/calendar"
+# ForexFactory официален RSS XML фийд (не се блокира)
+FF_XML_URL = "https://www.forexfactory.com/ff_calendar_thisweek.xml"
 
 # Файл, в който пазим вече изпратените събитие (за да не се дублират)
 SENT_FILE = "sent_events.json"
@@ -46,9 +45,9 @@ def save_sent(sent: set):
 def impact_color(impact: str) -> int:
     """Връща Discord embed цвят според важността."""
     if impact == "red":
-        return 0xFF0000   # Червено
+        return 0xFF0000
     if impact == "orange":
-        return 0xFF8C00   # Оранжево
+        return 0xFF8C00
     return 0x808080
 
 
@@ -60,104 +59,62 @@ def impact_emoji(impact: str) -> str:
     return "⚪"
 
 
-# ─── ПОПРАВКА: Филтър по днешна дата ─────────────────────────────────────────────
-def _is_today(event_date: str) -> bool:
-    """
-    Проверява дали събитието е за днес (UTC).
-    ForexFactory показва дати като "Wed Apr 22" или "Apr 22".
-    Редове без дата (event_date == "") са продължение на текущия ден — приемаме ги.
-    """
-    if not event_date:
-        return True  # Наследена дата от предишен ред — оставяме fetch_calendar да я обработи
-
-    now = datetime.now(timezone.utc)
-
-    # Опитваме различни формати, които ForexFactory използва
-    for fmt in ("%a %b %d", "%b %d", "%A %b %d"):
-        try:
-            parsed = datetime.strptime(event_date.strip(), fmt)
-            return parsed.month == now.month and parsed.day == now.day
-        except ValueError:
-            continue
-
-    # Ако не можем да парснем — включваме събитието (по-добре повече, отколкото нищо)
-    print(f"[WARN] Не мога да парсна дата: '{event_date}'")
-    return True
-# ─────────────────────────────────────────────────────────────────────────────────
-
-
 async def fetch_calendar() -> list[dict]:
-    """Изтегля ForexFactory и връща списък с важни събития."""
+    """
+    Изтегля ForexFactory XML фийд и връща само днешните важни събития.
+    XML формат: <weeklyevents><event><title>, <country>, <date>, <time>, <impact>, <forecast>, <previous>
+    """
     events = []
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
-        async with session.get(FF_URL, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-            if resp.status != 200:
-                print(f"[ERROR] ForexFactory върна статус {resp.status}")
-                return events
-            html = await resp.text()
+    today = datetime.now(timezone.utc)
 
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table", class_="calendar__table")
-    if not table:
-        print("[WARN] Не намерих таблицата с календара.")
+    async with aiohttp.ClientSession(headers=HEADERS) as session:
+        async with session.get(FF_XML_URL, timeout=aiohttp.ClientTimeout(total=20)) as resp:
+            if resp.status != 200:
+                print(f"[ERROR] ForexFactory XML върна статус {resp.status}")
+                return events
+            xml_text = await resp.text(encoding="utf-8")
+
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as e:
+        print(f"[ERROR] XML парсване неуспешно: {e}")
         return events
 
-    current_date = ""
-    current_time = ""
-
-    for row in table.find_all("tr", class_=re.compile("calendar__row")):
-        # Дата
-        date_cell = row.find("td", class_="calendar__date")
-        if date_cell and date_cell.get_text(strip=True):
-            current_date = date_cell.get_text(strip=True)
-
-        # Час
-        time_cell = row.find("td", class_="calendar__time")
-        if time_cell and time_cell.get_text(strip=True):
-            current_time = time_cell.get_text(strip=True)
-
-        # Важност (impact)
-        impact_cell = row.find("td", class_="calendar__impact")
-        if not impact_cell:
+    for ev in root.findall("event"):
+        # Дата — формат "Apr 22, 2026"
+        date_str = ev.findtext("date", "").strip()
+        try:
+            parsed_date = datetime.strptime(date_str, "%b %d, %Y")
+            if parsed_date.month != today.month or parsed_date.day != today.day:
+                continue  # Не е за днес
+        except ValueError:
+            print(f"[WARN] Не мога да парсна дата: '{date_str}'")
             continue
 
-        impact_span = impact_cell.find("span")
-        if not impact_span:
-            continue
-
-        impact_class = " ".join(impact_span.get("class", []))
-        if "high" in impact_class:
+        # Важност — "High" / "Medium" / "Low"
+        impact_raw = ev.findtext("impact", "").strip().lower()
+        if impact_raw == "high":
             impact = "red"
-        elif "medium" in impact_class:
+        elif impact_raw == "medium":
             impact = "orange"
         else:
-            continue   # Пропускаме ниска важност
+            continue  # Пропускаме ниска важност
 
-        # Валута
-        currency_cell = row.find("td", class_="calendar__currency")
-        currency = currency_cell.get_text(strip=True) if currency_cell else "N/A"
+        title    = ev.findtext("title",    "Unknown Event").strip()
+        country  = ev.findtext("country",  "N/A").strip()
+        ev_time  = ev.findtext("time",     "").strip()
+        forecast = ev.findtext("forecast", "").strip()
+        previous = ev.findtext("previous", "").strip()
+        actual   = ev.findtext("actual",   "").strip()
 
-        # Събитие
-        event_cell = row.find("td", class_="calendar__event")
-        event_name = event_cell.get_text(strip=True) if event_cell else "Unknown Event"
-
-        # Прогноза / Предишно / Реално
-        forecast_cell = row.find("td", class_="calendar__forecast")
-        previous_cell = row.find("td", class_="calendar__previous")
-        actual_cell   = row.find("td", class_="calendar__actual")
-
-        forecast = forecast_cell.get_text(strip=True) if forecast_cell else ""
-        previous = previous_cell.get_text(strip=True) if previous_cell else ""
-        actual   = actual_cell.get_text(strip=True)   if actual_cell   else ""
-
-        event_id = f"{current_date}_{current_time}_{currency}_{event_name}"
+        event_id = f"{date_str}_{ev_time}_{country}_{title}"
 
         events.append({
             "id":       event_id,
-            "date":     current_date,
-            "time":     current_time,
-            "currency": currency,
-            "event":    event_name,
+            "date":     date_str,
+            "time":     ev_time,
+            "currency": country,
+            "event":    title,
             "impact":   impact,
             "forecast": forecast,
             "previous": previous,
@@ -177,9 +134,9 @@ def build_embed(ev: dict) -> discord.Embed:
         color=color,
         timestamp=datetime.now(timezone.utc),
     )
-    embed.add_field(name="📅 Дата",    value=ev["date"]     or "—", inline=True)
-    embed.add_field(name="🕐 Час (ET)", value=ev["time"]    or "—", inline=True)
-    embed.add_field(name="💱 Валута",  value=ev["currency"] or "—", inline=True)
+    embed.add_field(name="📅 Дата",     value=ev["date"]     or "—", inline=True)
+    embed.add_field(name="🕐 Час (ET)", value=ev["time"]     or "—", inline=True)
+    embed.add_field(name="💱 Валута",   value=ev["currency"] or "—", inline=True)
 
     if ev["forecast"]:
         embed.add_field(name="📊 Прогноза", value=ev["forecast"], inline=True)
@@ -209,20 +166,17 @@ async def on_ready():
 
 async def post_daily_events(channel: discord.TextChannel):
     """Изтегля и публикува всички важни събития за деня."""
-    today = datetime.now(timezone.utc).strftime("%A, %d %B %Y")
+    today_str = datetime.now(timezone.utc).strftime("%A, %d %B %Y")
     print(f"[{datetime.now(timezone.utc).strftime('%H:%M')} UTC] Публикувам дневния календар...")
 
     try:
-        all_events = await fetch_calendar()
+        events = await fetch_calendar()
     except Exception as e:
         print(f"[ERROR] fetch_calendar: {e}")
         await channel.send(f"❌ Грешка при изтегляне на календара: {e}")
         return
 
-    # ─── ПОПРАВКА: Филтрираме само днешните събития ───────────────────────────
-    events = [ev for ev in all_events if _is_today(ev["date"])]
-    print(f"  → Общо намерени: {len(all_events)}, за днес: {len(events)}")
-    # ──────────────────────────────────────────────────────────────────────────
+    print(f"  → Намерени {len(events)} важни събития за днес.")
 
     red_events    = [ev for ev in events if ev["impact"] == "red"]
     orange_events = [ev for ev in events if ev["impact"] == "orange"]
@@ -231,7 +185,7 @@ async def post_daily_events(channel: discord.TextChannel):
     if not events:
         header = discord.Embed(
             title="📅 Икономически календар",
-            description=f"**{today}**\n\n✅ Няма важни събития за днес.",
+            description=f"**{today_str}**\n\n✅ Няма важни събития за днес.",
             color=0x2B2D31,
             timestamp=datetime.now(timezone.utc),
         )
@@ -242,7 +196,7 @@ async def post_daily_events(channel: discord.TextChannel):
     header = discord.Embed(
         title="📅 Икономически календар",
         description=(
-            f"**{today}**\n\n"
+            f"**{today_str}**\n\n"
             f"🔴 **High Impact:** {len(red_events)} събитие(я)\n"
             f"🟠 **Medium Impact:** {len(orange_events)} събитие(я)"
         ),
@@ -307,6 +261,7 @@ async def start_http_server():
     site = aio_web.TCPSite(runner, "0.0.0.0", port)
     await site.start()
     print(f"✅ HTTP health-check сървър стартиран на порт {port}")
+
 
 # ─── START ────────────────────────────────────────────────────────────────────────
 async def main():
