@@ -13,7 +13,7 @@ DISCORD_TOKEN   = os.getenv("DISCORD_TOKEN")
 CHANNEL_ID      = int(os.getenv("CHANNEL_ID"))
 # ⚠️ Смени с твоето GitHub username и repo name!
 GITHUB_USER    = "llenkov"
-GITHUB_REPO    = "https://github.com/llenkov/ForexFactory/tree/main"
+GITHUB_REPO    = "ForexFactory"
 
 # Raw URL към forex_calendar.xml в твоето GitHub репо
 # Пример: https://raw.githubusercontent.com/lenkov/forex-bot/main/forex_calendar.xml
