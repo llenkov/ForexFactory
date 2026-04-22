@@ -60,6 +60,32 @@ def impact_emoji(impact: str) -> str:
     return "⚪"
 
 
+# ─── ПОПРАВКА: Филтър по днешна дата ─────────────────────────────────────────────
+def _is_today(event_date: str) -> bool:
+    """
+    Проверява дали събитието е за днес (UTC).
+    ForexFactory показва дати като "Wed Apr 22" или "Apr 22".
+    Редове без дата (event_date == "") са продължение на текущия ден — приемаме ги.
+    """
+    if not event_date:
+        return True  # Наследена дата от предишен ред — оставяме fetch_calendar да я обработи
+
+    now = datetime.now(timezone.utc)
+
+    # Опитваме различни формати, които ForexFactory използва
+    for fmt in ("%a %b %d", "%b %d", "%A %b %d"):
+        try:
+            parsed = datetime.strptime(event_date.strip(), fmt)
+            return parsed.month == now.month and parsed.day == now.day
+        except ValueError:
+            continue
+
+    # Ако не можем да парснем — включваме събитието (по-добре повече, отколкото нищо)
+    print(f"[WARN] Не мога да парсна дата: '{event_date}'")
+    return True
+# ─────────────────────────────────────────────────────────────────────────────────
+
+
 async def fetch_calendar() -> list[dict]:
     """Изтегля ForexFactory и връща списък с важни събития."""
     events = []
@@ -187,11 +213,16 @@ async def post_daily_events(channel: discord.TextChannel):
     print(f"[{datetime.now(timezone.utc).strftime('%H:%M')} UTC] Публикувам дневния календар...")
 
     try:
-        events = await fetch_calendar()
+        all_events = await fetch_calendar()
     except Exception as e:
         print(f"[ERROR] fetch_calendar: {e}")
         await channel.send(f"❌ Грешка при изтегляне на календара: {e}")
         return
+
+    # ─── ПОПРАВКА: Филтрираме само днешните събития ───────────────────────────
+    events = [ev for ev in all_events if _is_today(ev["date"])]
+    print(f"  → Общо намерени: {len(all_events)}, за днес: {len(events)}")
+    # ──────────────────────────────────────────────────────────────────────────
 
     red_events    = [ev for ev in events if ev["impact"] == "red"]
     orange_events = [ev for ev in events if ev["impact"] == "orange"]
@@ -262,9 +293,6 @@ async def reset_sent(ctx):
 
 
 # ─── МИНИМАЛЕН HTTP СЪРВЪР (за Render Web Service) ───────────────────────────────
-# Render изисква услугата да слуша на порт — тази функция стартира
-# лек aiohttp сървър само за да мине health check-а.
-
 from aiohttp import web as aio_web
 
 async def health(request):
