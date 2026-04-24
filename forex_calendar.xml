@@ -651,6 +651,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/11-us-unemployment-claims]]></url>
 	</event>
 	<event>
+		<title>GfK Consumer Confidence</title>
+		<country>GBP</country>
+		<date><![CDATA[04-23-2026]]></date>
+		<time><![CDATA[1:21pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[-24]]></forecast>
+		<previous><![CDATA[-21]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/188-uk-gfk-consumer-confidence]]></url>
+	</event>
+	<event>
 		<title>Flash Manufacturing PMI</title>
 		<country>USD</country>
 		<date><![CDATA[04-23-2026]]></date>
@@ -691,16 +701,6 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/851-ge-buba-president-nagel-speaks]]></url>
 	</event>
 	<event>
-		<title>GfK Consumer Confidence</title>
-		<country>GBP</country>
-		<date><![CDATA[04-23-2026]]></date>
-		<time><![CDATA[11:01pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-24]]></forecast>
-		<previous><![CDATA[-21]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/188-uk-gfk-consumer-confidence]]></url>
-	</event>
-	<event>
 		<title>National Core CPI y/y</title>
 		<country>JPY</country>
 		<date><![CDATA[04-23-2026]]></date>
@@ -729,16 +729,6 @@
 		<forecast><![CDATA[0.0%]]></forecast>
 		<previous><![CDATA[-0.4%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/105-uk-retail-sales-mm]]></url>
-	</event>
-	<event>
-		<title>Foreign Direct Investment ytd/y</title>
-		<country>CNY</country>
-		<date><![CDATA[04-24-2026]]></date>
-		<time><![CDATA[6:02am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[-5.7%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/457-ch-foreign-direct-investment-ytdy]]></url>
 	</event>
 	<event>
 		<title>SNB Chairman Schlegel Speaks</title>
