@@ -751,6 +751,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/316-ge-ifo-business-climate]]></url>
 	</event>
 	<event>
+		<title>Foreign Direct Investment ytd/y</title>
+		<country>CNY</country>
+		<date><![CDATA[04-24-2026]]></date>
+		<time><![CDATA[9:01am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[-5.7%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/457-ch-foreign-direct-investment-ytdy]]></url>
+	</event>
+	<event>
 		<title>Core Retail Sales m/m</title>
 		<country>CAD</country>
 		<date><![CDATA[04-24-2026]]></date>
@@ -774,7 +784,7 @@
 		<title>Belgian NBB Business Climate</title>
 		<country>EUR</country>
 		<date><![CDATA[04-24-2026]]></date>
-		<time><![CDATA[1:00pm]]></time>
+		<time><![CDATA[12:32pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[-14.8]]></forecast>
 		<previous><![CDATA[-13.7]]></previous>
@@ -799,5 +809,15 @@
 		<forecast />
 		<previous><![CDATA[4.8%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/238-us-revised-uom-inflation-expectations]]></url>
+	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[04-25-2026]]></date>
+		<time><![CDATA[4:00pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
 	</event>
 </weeklyevents>
