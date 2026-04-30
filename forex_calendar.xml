@@ -304,7 +304,7 @@
 		<title>Italian 10-y Bond Auction</title>
 		<country>EUR</country>
 		<date><![CDATA[04-29-2026]]></date>
-		<time><![CDATA[9:33am]]></time>
+		<time><![CDATA[9:17am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[4.09|1.7]]></previous>
@@ -314,7 +314,7 @@
 		<title>German 10-y Bond Auction</title>
 		<country>EUR</country>
 		<date><![CDATA[04-29-2026]]></date>
-		<time><![CDATA[9:42am]]></time>
+		<time><![CDATA[9:32am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[2.92|1.2]]></previous>
@@ -324,10 +324,30 @@
 		<title>Building Permits</title>
 		<country>USD</country>
 		<date><![CDATA[04-29-2026]]></date>
+		<time><![CDATA[12:28pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[1.38M]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/198-us-building-permits]]></url>
+	</event>
+	<event>
+		<title>Housing Starts</title>
+		<country>USD</country>
+		<date><![CDATA[04-29-2026]]></date>
+		<time><![CDATA[12:28pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[1.49M]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/199-us-housing-starts]]></url>
+	</event>
+	<event>
+		<title>Building Permits</title>
+		<country>USD</country>
+		<date><![CDATA[04-29-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[1.39M]]></forecast>
-		<previous />
+		<previous><![CDATA[1.54M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/198-us-building-permits]]></url>
 	</event>
 	<event>
@@ -367,7 +387,7 @@
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[1.38M]]></forecast>
-		<previous />
+		<previous><![CDATA[1.36M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/199-us-housing-starts]]></url>
 	</event>
 	<event>
@@ -377,28 +397,8 @@
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[0.4%]]></forecast>
-		<previous><![CDATA[0.2%]]></previous>
+		<previous><![CDATA[0.8%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/642-us-prelim-wholesale-inventories-mm]]></url>
-	</event>
-	<event>
-		<title>Building Permits</title>
-		<country>USD</country>
-		<date><![CDATA[04-29-2026]]></date>
-		<time><![CDATA[12:30pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[1.38M]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/198-us-building-permits]]></url>
-	</event>
-	<event>
-		<title>Housing Starts</title>
-		<country>USD</country>
-		<date><![CDATA[04-29-2026]]></date>
-		<time><![CDATA[12:30pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[1.49M]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/199-us-housing-starts]]></url>
 	</event>
 	<event>
 		<title>BOC Monetary Policy Report</title>
