@@ -794,7 +794,7 @@
 		<title>BOE Inflation Letter</title>
 		<country>GBP</country>
 		<date><![CDATA[04-30-2026]]></date>
-		<time><![CDATA[11:10am]]></time>
+		<time><![CDATA[11:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
@@ -934,10 +934,20 @@
 		<title>CB Leading Index m/m</title>
 		<country>USD</country>
 		<date><![CDATA[04-30-2026]]></date>
+		<time><![CDATA[1:59pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[-0.1%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/297-us-cb-leading-index-mm]]></url>
+	</event>
+	<event>
+		<title>CB Leading Index m/m</title>
+		<country>USD</country>
+		<date><![CDATA[04-30-2026]]></date>
 		<time><![CDATA[2:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[-0.2%]]></forecast>
-		<previous><![CDATA[-0.1%]]></previous>
+		<previous><![CDATA[0.3%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/297-us-cb-leading-index-mm]]></url>
 	</event>
 	<event>
