@@ -1180,4 +1180,14 @@
 		<previous><![CDATA[16.3M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/828-us-wards-total-vehicle-sales]]></url>
 	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-01-2026]]></date>
+		<time><![CDATA[7:00pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
+	</event>
 </weeklyevents>
