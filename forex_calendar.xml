@@ -761,6 +761,26 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/251-uk-construction-pmi]]></url>
 	</event>
 	<event>
+		<title>Spanish 10-y Bond Auction</title>
+		<country>EUR</country>
+		<date><![CDATA[05-07-2026]]></date>
+		<time><![CDATA[8:46am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[3.44|2.0]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/525-sp-10-y-bond-auction]]></url>
+	</event>
+	<event>
+		<title>French 10-y Bond Auction</title>
+		<country>EUR</country>
+		<date><![CDATA[05-07-2026]]></date>
+		<time><![CDATA[8:57am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[3.73|1.9]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/523-fr-10-y-bond-auction]]></url>
+	</event>
+	<event>
 		<title>Retail Sales m/m</title>
 		<country>EUR</country>
 		<date><![CDATA[05-07-2026]]></date>
@@ -771,30 +791,10 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/106-ez-retail-sales-mm]]></url>
 	</event>
 	<event>
-		<title>Spanish 10-y Bond Auction</title>
-		<country>EUR</country>
-		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[9:03am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[3.44|2.0]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/525-sp-10-y-bond-auction]]></url>
-	</event>
-	<event>
-		<title>French 10-y Bond Auction</title>
-		<country>EUR</country>
-		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[9:18am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[3.73|1.9]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/523-fr-10-y-bond-auction]]></url>
-	</event>
-	<event>
 		<title>Challenger Job Cuts y/y</title>
 		<country>USD</country>
 		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[11:30am]]></time>
+		<time><![CDATA[9:30am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[-78.0%]]></previous>
@@ -874,7 +874,7 @@
 		<title>FOMC Member Kashkari Speaks</title>
 		<country>USD</country>
 		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[5:00pm]]></time>
+		<time><![CDATA[6:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
