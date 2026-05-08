@@ -844,10 +844,10 @@
 		<title>Construction Spending m/m</title>
 		<country>USD</country>
 		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[2:00pm]]></time>
+		<time><![CDATA[1:59pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.3%]]></forecast>
-		<previous />
+		<forecast />
+		<previous><![CDATA[-0.3%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/205-us-construction-spending-mm]]></url>
 	</event>
 	<event>
@@ -856,8 +856,8 @@
 		<date><![CDATA[05-07-2026]]></date>
 		<time><![CDATA[2:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[-0.3%]]></previous>
+		<forecast><![CDATA[0.3%]]></forecast>
+		<previous><![CDATA[-0.2%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/205-us-construction-spending-mm]]></url>
 	</event>
 	<event>
@@ -874,7 +874,7 @@
 		<title>FOMC Member Kashkari Speaks</title>
 		<country>USD</country>
 		<date><![CDATA[05-07-2026]]></date>
-		<time><![CDATA[6:00pm]]></time>
+		<time><![CDATA[5:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
@@ -919,26 +919,6 @@
 		<forecast><![CDATA[3.2%]]></forecast>
 		<previous><![CDATA[3.3%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/181-jn-average-cash-earnings-yy]]></url>
-	</event>
-	<event>
-		<title>Trade Balance</title>
-		<country>CNY</country>
-		<date><![CDATA[05-08-2026]]></date>
-		<time><![CDATA[2:03am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[575B]]></forecast>
-		<previous><![CDATA[355B]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/630-ch-trade-balance]]></url>
-	</event>
-	<event>
-		<title>USD-Denominated Trade Balance</title>
-		<country>CNY</country>
-		<date><![CDATA[05-08-2026]]></date>
-		<time><![CDATA[2:04am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[83.1B]]></forecast>
-		<previous><![CDATA[51.1B]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/450-ch-usd-denominated-trade-balance]]></url>
 	</event>
 	<event>
 		<title>German Industrial Production m/m</title>
@@ -1149,5 +1129,25 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/839-us-fomc-member-waller-speaks]]></url>
+	</event>
+	<event>
+		<title>Trade Balance</title>
+		<country>CNY</country>
+		<date><![CDATA[05-09-2026]]></date>
+		<time><![CDATA[3:33am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[575B]]></forecast>
+		<previous><![CDATA[355B]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/630-ch-trade-balance]]></url>
+	</event>
+	<event>
+		<title>USD-Denominated Trade Balance</title>
+		<country>CNY</country>
+		<date><![CDATA[05-09-2026]]></date>
+		<time><![CDATA[3:33am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[83.1B]]></forecast>
+		<previous><![CDATA[51.1B]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/450-ch-usd-denominated-trade-balance]]></url>
 	</event>
 </weeklyevents>
