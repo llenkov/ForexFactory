@@ -1081,6 +1081,26 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/154-us-final-wholesale-inventories-mm]]></url>
 	</event>
 	<event>
+		<title>FOMC Member Goolsbee Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-08-2026]]></date>
+		<time><![CDATA[3:05pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/889-us-fomc-member-goolsbee-speaks]]></url>
+	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-08-2026]]></date>
+		<time><![CDATA[4:00pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
+	</event>
+	<event>
 		<title>German Buba President Nagel Speaks</title>
 		<country>EUR</country>
 		<date><![CDATA[05-08-2026]]></date>
@@ -1089,6 +1109,26 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/851-ge-buba-president-nagel-speaks]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Goolsbee Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-08-2026]]></date>
+		<time><![CDATA[6:20pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/889-us-fomc-member-goolsbee-speaks]]></url>
+	</event>
+	<event>
+		<title>FOMC Financial Stability Report</title>
+		<country>USD</country>
+		<date><![CDATA[05-08-2026]]></date>
+		<time><![CDATA[8:00pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/843-us-fomc-financial-stability-report]]></url>
 	</event>
 	<event>
 		<title>FOMC Member Bowman Speaks</title>
@@ -1131,23 +1171,23 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/839-us-fomc-member-waller-speaks]]></url>
 	</event>
 	<event>
-		<title>Trade Balance</title>
-		<country>CNY</country>
-		<date><![CDATA[05-09-2026]]></date>
-		<time><![CDATA[3:33am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[575B]]></forecast>
-		<previous><![CDATA[355B]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/630-ch-trade-balance]]></url>
-	</event>
-	<event>
 		<title>USD-Denominated Trade Balance</title>
 		<country>CNY</country>
 		<date><![CDATA[05-09-2026]]></date>
-		<time><![CDATA[3:33am]]></time>
+		<time><![CDATA[2:42am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[83.1B]]></forecast>
 		<previous><![CDATA[51.1B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/450-ch-usd-denominated-trade-balance]]></url>
+	</event>
+	<event>
+		<title>Trade Balance</title>
+		<country>CNY</country>
+		<date><![CDATA[05-09-2026]]></date>
+		<time><![CDATA[2:43am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[575B]]></forecast>
+		<previous><![CDATA[355B]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/630-ch-trade-balance]]></url>
 	</event>
 </weeklyevents>
