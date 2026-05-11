@@ -441,6 +441,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
 	<event>
+		<title>Gov Council Member Alexopoulos Speaks</title>
+		<country>CAD</country>
+		<date><![CDATA[05-13-2026]]></date>
+		<time><![CDATA[3:05pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/918-ca-gov-council-member-alexopoulos-speaks]]></url>
+	</event>
+	<event>
 		<title>FOMC Member Collins Speaks</title>
 		<country>USD</country>
 		<date><![CDATA[05-13-2026]]></date>
@@ -479,16 +489,6 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/891-ca-boc-summary-of-deliberations]]></url>
-	</event>
-	<event>
-		<title>Gov Council Member Alexopoulos Speaks</title>
-		<country>CAD</country>
-		<date><![CDATA[05-13-2026]]></date>
-		<time><![CDATA[6:30pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/918-ca-gov-council-member-alexopoulos-speaks]]></url>
 	</event>
 	<event>
 		<title>ECB President Lagarde Speaks</title>
