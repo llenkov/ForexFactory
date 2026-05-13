@@ -231,6 +231,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/884-us-cpi-yy]]></url>
 	</event>
 	<event>
+		<title>FOMC Member Goolsbee Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-12-2026]]></date>
+		<time><![CDATA[1:10pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/889-us-fomc-member-goolsbee-speaks]]></url>
+	</event>
+	<event>
 		<title>CB Leading Index m/m</title>
 		<country>AUD</country>
 		<date><![CDATA[05-12-2026]]></date>
@@ -239,16 +249,6 @@
 		<forecast />
 		<previous><![CDATA[1.1%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/247-au-cb-leading-index-mm]]></url>
-	</event>
-	<event>
-		<title>Fed Chair Nomination Vote</title>
-		<country>USD</country>
-		<date><![CDATA[05-12-2026]]></date>
-		<time><![CDATA[4:00pm]]></time>
-		<impact><![CDATA[High]]></impact>
-		<forecast><![CDATA[Pass]]></forecast>
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/487-us-fed-chair-nomination-vote]]></url>
 	</event>
 	<event>
 		<title>FOMC Member Goolsbee Speaks</title>
@@ -346,7 +346,7 @@
 		<date><![CDATA[05-13-2026]]></date>
 		<time><![CDATA[6:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[1.8%]]></forecast>
+		<forecast><![CDATA[1.7%]]></forecast>
 		<previous><![CDATA[2.7%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/291-ge-wpi-mm]]></url>
 	</event>
@@ -366,7 +366,7 @@
 		<date><![CDATA[05-13-2026]]></date>
 		<time><![CDATA[9:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.1%]]></forecast>
+		<forecast><![CDATA[0.0%]]></forecast>
 		<previous><![CDATA[0.2%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/808-ez-flash-employment-change-qq]]></url>
 	</event>
@@ -386,7 +386,7 @@
 		<date><![CDATA[05-13-2026]]></date>
 		<time><![CDATA[9:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.2%]]></forecast>
+		<forecast><![CDATA[0.3%]]></forecast>
 		<previous><![CDATA[0.4%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/220-ez-industrial-production-mm]]></url>
 	</event>
@@ -394,7 +394,7 @@
 		<title>German 30-y Bond Auction</title>
 		<country>EUR</country>
 		<date><![CDATA[05-13-2026]]></date>
-		<time><![CDATA[9:34am]]></time>
+		<time><![CDATA[9:48am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[3.58|1.4]]></previous>
@@ -446,7 +446,7 @@
 		<date><![CDATA[05-13-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-1.6M]]></forecast>
+		<forecast><![CDATA[-2.0M]]></forecast>
 		<previous><![CDATA[-2.3M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
@@ -469,6 +469,16 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/882-us-fomc-member-collins-speaks]]></url>
+	</event>
+	<event>
+		<title>Fed Chair Nomination Vote</title>
+		<country>USD</country>
+		<date><![CDATA[05-13-2026]]></date>
+		<time><![CDATA[4:29pm]]></time>
+		<impact><![CDATA[High]]></impact>
+		<forecast><![CDATA[Pass]]></forecast>
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/487-us-fed-chair-nomination-vote]]></url>
 	</event>
 	<event>
 		<title>30-y Bond Auction</title>
@@ -776,7 +786,7 @@
 		<date><![CDATA[05-14-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[86B]]></forecast>
 		<previous><![CDATA[63B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
@@ -876,7 +886,7 @@
 		<date><![CDATA[05-15-2026]]></date>
 		<time><![CDATA[12:15pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[243K]]></forecast>
+		<forecast><![CDATA[244K]]></forecast>
 		<previous><![CDATA[236K]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/201-ca-housing-starts]]></url>
 	</event>
@@ -906,7 +916,7 @@
 		<date><![CDATA[05-15-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[7.4]]></forecast>
+		<forecast><![CDATA[7.3]]></forecast>
 		<previous><![CDATA[11.0]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/207-us-empire-state-manufacturing-index]]></url>
 	</event>
