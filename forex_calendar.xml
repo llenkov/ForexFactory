@@ -801,24 +801,24 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/836-uk-flash-services-pmi]]></url>
 	</event>
 	<event>
-		<title>EU Economic Forecasts</title>
-		<country>EUR</country>
-		<date><![CDATA[05-21-2026]]></date>
-		<time><![CDATA[9:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/413-ez-eu-economic-forecasts]]></url>
-	</event>
-	<event>
 		<title>10-y Bond Auction</title>
 		<country>GBP</country>
 		<date><![CDATA[05-21-2026]]></date>
-		<time><![CDATA[9:33am]]></time>
+		<time><![CDATA[9:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[4.91|3.5]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/526-uk-10-y-bond-auction]]></url>
+	</event>
+	<event>
+		<title>EU Economic Forecasts</title>
+		<country>EUR</country>
+		<date><![CDATA[05-21-2026]]></date>
+		<time><![CDATA[9:30am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/413-ez-eu-economic-forecasts]]></url>
 	</event>
 	<event>
 		<title>German Buba Monthly Report</title>
@@ -914,7 +914,7 @@
 		<title>Consumer Confidence</title>
 		<country>EUR</country>
 		<date><![CDATA[05-21-2026]]></date>
-		<time><![CDATA[2:00pm]]></time>
+		<time><![CDATA[2:02pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[-21]]></forecast>
 		<previous><![CDATA[-21]]></previous>
