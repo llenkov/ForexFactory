@@ -94,7 +94,7 @@
 		<title>Gov Council Member Vincent Speaks</title>
 		<country>CAD</country>
 		<date><![CDATA[05-26-2026]]></date>
-		<time><![CDATA[12:30pm]]></time>
+		<time><![CDATA[12:20pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
@@ -136,7 +136,7 @@
 		<date><![CDATA[05-26-2026]]></date>
 		<time><![CDATA[11:50pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[3.2%]]></forecast>
+		<forecast><![CDATA[3.3%]]></forecast>
 		<previous><![CDATA[3.1%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/176-jn-sppi-yy]]></url>
 	</event>
@@ -424,7 +424,7 @@
 		<title>ECB President Lagarde Speaks</title>
 		<country>EUR</country>
 		<date><![CDATA[05-28-2026]]></date>
-		<time><![CDATA[7:20am]]></time>
+		<time><![CDATA[6:10am]]></time>
 		<impact><![CDATA[Medium]]></impact>
 		<forecast />
 		<previous />
@@ -607,18 +607,8 @@
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[101B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
-	</event>
-	<event>
-		<title>BOC Gov Macklem Speaks</title>
-		<country>CAD</country>
-		<date><![CDATA[05-28-2026]]></date>
-		<time><![CDATA[3:00pm]]></time>
-		<impact><![CDATA[Medium]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/840-ca-boc-gov-macklem-speaks]]></url>
 	</event>
 	<event>
 		<title>BOC Press Conference</title>
@@ -739,6 +729,16 @@
 		<forecast><![CDATA[1.2%]]></forecast>
 		<previous><![CDATA[3.6%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/257-ge-import-prices-mm]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Kashkari Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[05-29-2026]]></date>
+		<time><![CDATA[6:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/651-us-fomc-member-kashkari-speaks]]></url>
 	</event>
 	<event>
 		<title>German Prelim CPI m/m</title>
@@ -876,7 +876,7 @@
 		<date><![CDATA[05-29-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-86.5B]]></forecast>
+		<forecast><![CDATA[-86.7B]]></forecast>
 		<previous><![CDATA[-87.9B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/625-us-goods-trade-balance]]></url>
 	</event>
