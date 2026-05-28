@@ -284,7 +284,7 @@
 		<title>German 30-y Bond Auction</title>
 		<country>EUR</country>
 		<date><![CDATA[05-27-2026]]></date>
-		<time><![CDATA[9:34am]]></time>
+		<time><![CDATA[9:33am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[3.62|1.3]]></previous>
@@ -424,7 +424,7 @@
 		<title>ECB President Lagarde Speaks</title>
 		<country>EUR</country>
 		<date><![CDATA[05-28-2026]]></date>
-		<time><![CDATA[6:10am]]></time>
+		<time><![CDATA[7:10am]]></time>
 		<impact><![CDATA[Medium]]></impact>
 		<forecast />
 		<previous />
@@ -606,7 +606,7 @@
 		<date><![CDATA[05-28-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[96B]]></forecast>
 		<previous><![CDATA[101B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
@@ -626,7 +626,7 @@
 		<date><![CDATA[05-28-2026]]></date>
 		<time><![CDATA[4:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[-3.8M]]></forecast>
 		<previous><![CDATA[-7.9M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
