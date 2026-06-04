@@ -581,6 +581,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/889-us-fomc-member-goolsbee-speaks]]></url>
 	</event>
 	<event>
+		<title>Private Sector Credit m/m</title>
+		<country>AUD</country>
+		<date><![CDATA[06-03-2026]]></date>
+		<time><![CDATA[6:19am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[0.6%]]></forecast>
+		<previous><![CDATA[0.7%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/344-au-private-sector-credit-mm]]></url>
+	</event>
+	<event>
 		<title>Spanish Services PMI</title>
 		<country>EUR</country>
 		<date><![CDATA[06-03-2026]]></date>
@@ -754,7 +764,7 @@
 		<title>FOMC Member Logan Speaks</title>
 		<country>USD</country>
 		<date><![CDATA[06-03-2026]]></date>
-		<time><![CDATA[7:00pm]]></time>
+		<time><![CDATA[8:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
@@ -901,12 +911,22 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/178-us-revised-unit-labor-costs-qq]]></url>
 	</event>
 	<event>
+		<title>FOMC Member Bowman Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-04-2026]]></date>
+		<time><![CDATA[2:00pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/812-us-fomc-member-bowman-speaks]]></url>
+	</event>
+	<event>
 		<title>Natural Gas Storage</title>
 		<country>USD</country>
 		<date><![CDATA[06-04-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[99B]]></forecast>
 		<previous><![CDATA[92B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
@@ -919,6 +939,26 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/838-uk-boe-gov-bailey-speaks]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Daly Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-04-2026]]></date>
+		<time><![CDATA[3:40pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/807-us-fomc-member-daly-speaks]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Schmid Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-04-2026]]></date>
+		<time><![CDATA[5:00pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/912-us-fomc-member-schmid-speaks]]></url>
 	</event>
 	<event>
 		<title>FOMC Member Daly Speaks</title>
@@ -949,16 +989,6 @@
 		<forecast><![CDATA[-1.5%]]></forecast>
 		<previous><![CDATA[-2.9%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/359-jn-household-spending-yy]]></url>
-	</event>
-	<event>
-		<title>Private Sector Credit m/m</title>
-		<country>AUD</country>
-		<date><![CDATA[06-05-2026]]></date>
-		<time><![CDATA[1:50am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.6%]]></forecast>
-		<previous><![CDATA[0.7%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/344-au-private-sector-credit-mm]]></url>
 	</event>
 	<event>
 		<title>RBA Deputy Gov Hauser Speaks</title>
