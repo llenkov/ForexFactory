@@ -53,8 +53,8 @@
 	<event>
 		<title>Final GDP Price Index y/y</title>
 		<country>JPY</country>
-		<date><![CDATA[06-07-2026]]></date>
-		<time><![CDATA[11:50pm]]></time>
+		<date><![CDATA[06-08-2026]]></date>
+		<time><![CDATA[12:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[3.4%]]></forecast>
 		<previous><![CDATA[3.4%]]></previous>
@@ -63,8 +63,8 @@
 	<event>
 		<title>Final GDP q/q</title>
 		<country>JPY</country>
-		<date><![CDATA[06-07-2026]]></date>
-		<time><![CDATA[11:50pm]]></time>
+		<date><![CDATA[06-08-2026]]></date>
+		<time><![CDATA[12:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[0.3%]]></forecast>
 		<previous><![CDATA[0.5%]]></previous>
@@ -469,16 +469,6 @@
 		<forecast />
 		<previous><![CDATA[5.6%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/293-au-mi-inflation-expectations]]></url>
-	</event>
-	<event>
-		<title>German WPI m/m</title>
-		<country>EUR</country>
-		<date><![CDATA[06-11-2026]]></date>
-		<time><![CDATA[6:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[2.0%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/291-ge-wpi-mm]]></url>
 	</event>
 	<event>
 		<title>M2 Money Supply y/y</title>
