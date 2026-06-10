@@ -296,7 +296,7 @@
 		<date><![CDATA[06-10-2026]]></date>
 		<time><![CDATA[1:30am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[3.8%]]></forecast>
+		<forecast><![CDATA[3.9%]]></forecast>
 		<previous><![CDATA[2.8%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/455-ch-ppi-yy]]></url>
 	</event>
@@ -406,7 +406,7 @@
 		<date><![CDATA[06-10-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-5.1M]]></forecast>
+		<forecast><![CDATA[-3.0M]]></forecast>
 		<previous><![CDATA[-8.0M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
@@ -426,7 +426,7 @@
 		<date><![CDATA[06-10-2026]]></date>
 		<time><![CDATA[6:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-280.9B]]></forecast>
+		<forecast><![CDATA[-282.9B]]></forecast>
 		<previous><![CDATA[215.0B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/322-us-federal-budget-balance]]></url>
 	</event>
@@ -566,7 +566,7 @@
 		<date><![CDATA[06-11-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[101B]]></forecast>
 		<previous><![CDATA[95B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
@@ -709,16 +709,6 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/504-ez-ecofin-meetings]]></url>
-	</event>
-	<event>
-		<title>Capacity Utilization Rate</title>
-		<country>CAD</country>
-		<date><![CDATA[06-12-2026]]></date>
-		<time><![CDATA[12:30pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[78.6%]]></forecast>
-		<previous><![CDATA[78.5%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/146-ca-capacity-utilization-rate]]></url>
 	</event>
 	<event>
 		<title>CB Leading Index m/m</title>
