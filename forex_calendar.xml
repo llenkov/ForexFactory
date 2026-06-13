@@ -671,24 +671,14 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/171-fr-final-cpi-mm]]></url>
 	</event>
 	<event>
-		<title>M2 Money Supply y/y</title>
-		<country>CNY</country>
+		<title>Italian Quarterly Unemployment Rate</title>
+		<country>EUR</country>
 		<date><![CDATA[06-12-2026]]></date>
-		<time><![CDATA[8:03am]]></time>
+		<time><![CDATA[8:30am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[8.6%]]></forecast>
-		<previous><![CDATA[8.6%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/476-ch-m2-money-supply-yy]]></url>
-	</event>
-	<event>
-		<title>New Loans</title>
-		<country>CNY</country>
-		<date><![CDATA[06-12-2026]]></date>
-		<time><![CDATA[8:03am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[450B]]></forecast>
-		<previous><![CDATA[-10B]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/477-ch-new-loans]]></url>
+		<forecast />
+		<previous><![CDATA[5.6%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/61-it-quarterly-unemployment-rate]]></url>
 	</event>
 	<event>
 		<title>Consumer Inflation Expectations</title>
@@ -699,6 +689,26 @@
 		<forecast />
 		<previous><![CDATA[3.2%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/425-uk-consumer-inflation-expectations]]></url>
+	</event>
+	<event>
+		<title>M2 Money Supply y/y</title>
+		<country>CNY</country>
+		<date><![CDATA[06-12-2026]]></date>
+		<time><![CDATA[9:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[8.6%]]></forecast>
+		<previous><![CDATA[8.6%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/476-ch-m2-money-supply-yy]]></url>
+	</event>
+	<event>
+		<title>New Loans</title>
+		<country>CNY</country>
+		<date><![CDATA[06-12-2026]]></date>
+		<time><![CDATA[9:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[450B]]></forecast>
+		<previous><![CDATA[-10B]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/477-ch-new-loans]]></url>
 	</event>
 	<event>
 		<title>ECOFIN Meetings</title>
