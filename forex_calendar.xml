@@ -74,7 +74,7 @@
 		<title>ECB President Lagarde Speaks</title>
 		<country>EUR</country>
 		<date><![CDATA[06-15-2026]]></date>
-		<time><![CDATA[7:15am]]></time>
+		<time><![CDATA[7:30am]]></time>
 		<impact><![CDATA[Medium]]></impact>
 		<forecast />
 		<previous />
@@ -89,6 +89,16 @@
 		<forecast><![CDATA[5.19B]]></forecast>
 		<previous><![CDATA[4.71B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/127-it-trade-balance]]></url>
+	</event>
+	<event>
+		<title>G7 Meetings</title>
+		<country>All</country>
+		<date><![CDATA[06-15-2026]]></date>
+		<time><![CDATA[8:45am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/423-g7-meetings]]></url>
 	</event>
 	<event>
 		<title>Industrial Production m/m</title>
@@ -311,6 +321,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/20-jn-boj-press-conference]]></url>
 	</event>
 	<event>
+		<title>G7 Meetings</title>
+		<country>All</country>
+		<date><![CDATA[06-16-2026]]></date>
+		<time><![CDATA[8:45am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/423-g7-meetings]]></url>
+	</event>
+	<event>
 		<title>German ZEW Economic Sentiment</title>
 		<country>EUR</country>
 		<date><![CDATA[06-16-2026]]></date>
@@ -531,6 +551,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/639-uk-hpi-yy]]></url>
 	</event>
 	<event>
+		<title>G7 Meetings</title>
+		<country>All</country>
+		<date><![CDATA[06-17-2026]]></date>
+		<time><![CDATA[8:45am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/423-g7-meetings]]></url>
+	</event>
+	<event>
 		<title>Final Core CPI y/y</title>
 		<country>EUR</country>
 		<date><![CDATA[06-17-2026]]></date>
@@ -579,6 +609,16 @@
 		<forecast><![CDATA[0.5%]]></forecast>
 		<previous><![CDATA[0.5%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/102-us-retail-sales-mm]]></url>
+	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-17-2026]]></date>
+		<time><![CDATA[1:30pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
 	</event>
 	<event>
 		<title>Business Inventories m/m</title>
