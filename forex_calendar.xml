@@ -314,7 +314,7 @@
 		<title>BOJ Press Conference</title>
 		<country>JPY</country>
 		<date><![CDATA[06-16-2026]]></date>
-		<time><![CDATA[5:30am]]></time>
+		<time><![CDATA[6:30am]]></time>
 		<impact><![CDATA[High]]></impact>
 		<forecast />
 		<previous />
@@ -354,7 +354,7 @@
 		<title>10-y Bond Auction</title>
 		<country>GBP</country>
 		<date><![CDATA[06-16-2026]]></date>
-		<time><![CDATA[9:33am]]></time>
+		<time><![CDATA[9:02am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[4.98|3.6]]></previous>
@@ -414,7 +414,7 @@
 		<title>GDT Price Index</title>
 		<country>NZD</country>
 		<date><![CDATA[06-16-2026]]></date>
-		<time><![CDATA[2:50pm]]></time>
+		<time><![CDATA[3:14pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[-0.6%]]></previous>
@@ -446,7 +446,7 @@
 		<date><![CDATA[06-16-2026]]></date>
 		<time><![CDATA[10:45pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-1.03B]]></forecast>
+		<forecast><![CDATA[-1.01B]]></forecast>
 		<previous><![CDATA[-5.98B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/215-nz-current-account]]></url>
 	</event>
@@ -456,7 +456,7 @@
 		<date><![CDATA[06-16-2026]]></date>
 		<time><![CDATA[11:50pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[2.1%]]></forecast>
+		<forecast><![CDATA[1.2%]]></forecast>
 		<previous><![CDATA[-9.4%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/354-jn-core-machinery-orders-mm]]></url>
 	</event>
@@ -656,7 +656,7 @@
 		<date><![CDATA[06-17-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[-3.6M]]></forecast>
 		<previous><![CDATA[-7.2M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
@@ -906,7 +906,7 @@
 		<date><![CDATA[06-18-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[82B]]></forecast>
 		<previous><![CDATA[108B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
