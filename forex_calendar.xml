@@ -621,16 +621,6 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/102-us-retail-sales-mm]]></url>
 	</event>
 	<event>
-		<title>President Trump Speaks</title>
-		<country>USD</country>
-		<date><![CDATA[06-17-2026]]></date>
-		<time><![CDATA[1:30pm]]></time>
-		<impact><![CDATA[Medium]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
-	</event>
-	<event>
 		<title>Business Inventories m/m</title>
 		<country>USD</country>
 		<date><![CDATA[06-17-2026]]></date>
@@ -659,6 +649,16 @@
 		<forecast><![CDATA[-3.6M]]></forecast>
 		<previous><![CDATA[-7.2M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
+	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-17-2026]]></date>
+		<time><![CDATA[2:45pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
 	</event>
 	<event>
 		<title>Federal Funds Rate</title>
