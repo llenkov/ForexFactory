@@ -641,6 +641,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/923-au-household-spending-mm]]></url>
 	</event>
 	<event>
+		<title>NAB Quarterly Business Confidence</title>
+		<country>AUD</country>
+		<date><![CDATA[06-25-2026]]></date>
+		<time><![CDATA[3:50am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[-4]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/248-au-nab-quarterly-business-confidence]]></url>
+	</event>
+	<event>
 		<title>German GfK Consumer Climate</title>
 		<country>EUR</country>
 		<date><![CDATA[06-25-2026]]></date>
@@ -751,10 +761,20 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/356-us-personal-spending-mm]]></url>
 	</event>
 	<event>
+		<title>FOMC Member Bowman Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[06-25-2026]]></date>
+		<time><![CDATA[12:45pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/812-us-fomc-member-bowman-speaks]]></url>
+	</event>
+	<event>
 		<title>CB Leading Index m/m</title>
 		<country>CNY</country>
 		<date><![CDATA[06-25-2026]]></date>
-		<time><![CDATA[1:00pm]]></time>
+		<time><![CDATA[1:04pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[-0.8%]]></previous>
@@ -801,16 +821,6 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/175-jn-tokyo-core-cpi-yy]]></url>
 	</event>
 	<event>
-		<title>NAB Quarterly Business Confidence</title>
-		<country>AUD</country>
-		<date><![CDATA[06-26-2026]]></date>
-		<time><![CDATA[3:59am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[-4]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/248-au-nab-quarterly-business-confidence]]></url>
-	</event>
-	<event>
 		<title>German Buba President Nagel Speaks</title>
 		<country>EUR</country>
 		<date><![CDATA[06-26-2026]]></date>
@@ -827,7 +837,7 @@
 		<time><![CDATA[9:33am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[3.77|1.6]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/524-it-10-y-bond-auction]]></url>
 	</event>
 	<event>
@@ -869,16 +879,6 @@
 		<forecast />
 		<previous><![CDATA[4.6%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/238-us-revised-uom-inflation-expectations]]></url>
-	</event>
-	<event>
-		<title>FOMC Member Williams Speaks</title>
-		<country>USD</country>
-		<date><![CDATA[06-26-2026]]></date>
-		<time><![CDATA[2:30pm]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/518-us-fomc-member-williams-speaks]]></url>
 	</event>
 	<event>
 		<title>FOMC Member Kashkari Speaks</title>
