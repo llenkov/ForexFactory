@@ -671,6 +671,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/553-us-final-manufacturing-pmi]]></url>
 	</event>
 	<event>
+		<title>ECB President Lagarde Speaks</title>
+		<country>EUR</country>
+		<date><![CDATA[07-01-2026]]></date>
+		<time><![CDATA[2:00pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/832-ez-ecb-president-lagarde-speaks]]></url>
+	</event>
+	<event>
 		<title>ISM Manufacturing PMI</title>
 		<country>USD</country>
 		<date><![CDATA[07-01-2026]]></date>
@@ -709,16 +719,6 @@
 		<forecast><![CDATA[16.0M]]></forecast>
 		<previous><![CDATA[16.1M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/828-us-omdia-total-vehicle-sales]]></url>
-	</event>
-	<event>
-		<title>ECB President Lagarde Speaks</title>
-		<country>EUR</country>
-		<date><![CDATA[07-01-2026]]></date>
-		<time><![CDATA[2:30pm]]></time>
-		<impact><![CDATA[Medium]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/832-ez-ecb-president-lagarde-speaks]]></url>
 	</event>
 	<event>
 		<title>Crude Oil Inventories</title>
@@ -847,7 +847,7 @@
 		<time><![CDATA[9:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[3.38|1.9]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/525-sp-10-y-bond-auction]]></url>
 	</event>
 	<event>
@@ -869,6 +869,16 @@
 		<forecast />
 		<previous><![CDATA[4.86|3.5]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/526-uk-10-y-bond-auction]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Daly Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[07-02-2026]]></date>
+		<time><![CDATA[11:45am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/807-us-fomc-member-daly-speaks]]></url>
 	</event>
 	<event>
 		<title>Average Hourly Earnings m/m</title>
