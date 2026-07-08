@@ -191,14 +191,14 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/221-ge-industrial-production-mm]]></url>
 	</event>
 	<event>
-		<title>Halifax HPI m/m</title>
+		<title>Lloyds HPI m/m</title>
 		<country>GBP</country>
 		<date><![CDATA[07-07-2026]]></date>
-		<time><![CDATA[6:00am]]></time>
+		<time><![CDATA[6:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[0.1%]]></forecast>
 		<previous><![CDATA[-0.1%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/151-uk-halifax-hpi-mm]]></url>
+		<url><![CDATA[https://www.forexfactory.com/calendar/151-uk-lloyds-hpi-mm]]></url>
 	</event>
 	<event>
 		<title>French Trade Balance</title>
@@ -287,7 +287,7 @@
 		<time><![CDATA[12:15pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[24.3K]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/929-us-adp-weekly-employment-change]]></url>
 	</event>
 	<event>
@@ -324,7 +324,7 @@
 		<title>RCM/TIPP Economic Optimism</title>
 		<country>USD</country>
 		<date><![CDATA[07-07-2026]]></date>
-		<time><![CDATA[2:10pm]]></time>
+		<time><![CDATA[2:04pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[45.0]]></forecast>
 		<previous><![CDATA[42.5]]></previous>
@@ -334,7 +334,7 @@
 		<title>GDT Price Index</title>
 		<country>NZD</country>
 		<date><![CDATA[07-07-2026]]></date>
-		<time><![CDATA[2:50pm]]></time>
+		<time><![CDATA[3:16pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[-2.8%]]></previous>
@@ -456,9 +456,19 @@
 		<date><![CDATA[07-08-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[-1.9M]]></forecast>
 		<previous><![CDATA[-3.8M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
+	</event>
+	<event>
+		<title>SNB Chairman Schlegel Speaks</title>
+		<country>CHF</country>
+		<date><![CDATA[07-08-2026]]></date>
+		<time><![CDATA[4:40pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/915-sz-snb-chairman-schlegel-speaks]]></url>
 	</event>
 	<event>
 		<title>10-y Bond Auction</title>
@@ -616,7 +626,7 @@
 		<date><![CDATA[07-09-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[60B]]></forecast>
 		<previous><![CDATA[87B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
