@@ -316,7 +316,7 @@
 		<date><![CDATA[07-29-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-1.7M]]></forecast>
+		<forecast><![CDATA[0.7M]]></forecast>
 		<previous><![CDATA[2.0M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
@@ -596,7 +596,7 @@
 		<date><![CDATA[07-30-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[High]]></impact>
-		<forecast><![CDATA[2.0%]]></forecast>
+		<forecast><![CDATA[2.1%]]></forecast>
 		<previous><![CDATA[2.0%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/2-us-advance-gdp-qq]]></url>
 	</event>
@@ -656,7 +656,7 @@
 		<date><![CDATA[07-30-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[37B]]></forecast>
 		<previous><![CDATA[32B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
