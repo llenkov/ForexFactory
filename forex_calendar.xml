@@ -534,7 +534,7 @@
 		<title>Italian 10-y Bond Auction</title>
 		<country>EUR</country>
 		<date><![CDATA[07-30-2026]]></date>
-		<time><![CDATA[9:33am]]></time>
+		<time><![CDATA[9:06am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[3.63|1.7]]></previous>
@@ -584,7 +584,7 @@
 		<title>BOE Gov Bailey Speaks</title>
 		<country>GBP</country>
 		<date><![CDATA[07-30-2026]]></date>
-		<time><![CDATA[11:30am]]></time>
+		<time><![CDATA[12:00pm]]></time>
 		<impact><![CDATA[High]]></impact>
 		<forecast />
 		<previous />
@@ -741,10 +741,20 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/520-ch-non-manufacturing-pmi]]></url>
 	</event>
 	<event>
+		<title>BOJ Outlook Report</title>
+		<country>JPY</country>
+		<date><![CDATA[07-31-2026]]></date>
+		<time><![CDATA[3:11am]]></time>
+		<impact><![CDATA[High]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/426-jn-boj-outlook-report]]></url>
+	</event>
+	<event>
 		<title>BOJ Policy Rate</title>
 		<country>JPY</country>
 		<date><![CDATA[07-31-2026]]></date>
-		<time><![CDATA[2:30am]]></time>
+		<time><![CDATA[3:11am]]></time>
 		<impact><![CDATA[High]]></impact>
 		<forecast><![CDATA[<1.00%]]></forecast>
 		<previous><![CDATA[<1.00%]]></previous>
@@ -754,21 +764,11 @@
 		<title>Monetary Policy Statement</title>
 		<country>JPY</country>
 		<date><![CDATA[07-31-2026]]></date>
-		<time><![CDATA[2:30am]]></time>
+		<time><![CDATA[3:11am]]></time>
 		<impact><![CDATA[High]]></impact>
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/371-jn-monetary-policy-statement]]></url>
-	</event>
-	<event>
-		<title>BOJ Outlook Report</title>
-		<country>JPY</country>
-		<date><![CDATA[07-31-2026]]></date>
-		<time><![CDATA[2:31am]]></time>
-		<impact><![CDATA[High]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/426-jn-boj-outlook-report]]></url>
 	</event>
 	<event>
 		<title>Housing Starts y/y</title>
