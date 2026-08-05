@@ -354,7 +354,7 @@
 		<title>RCM/TIPP Economic Optimism</title>
 		<country>USD</country>
 		<date><![CDATA[08-04-2026]]></date>
-		<time><![CDATA[2:10pm]]></time>
+		<time><![CDATA[2:13pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast><![CDATA[47.5]]></forecast>
 		<previous><![CDATA[45.5]]></previous>
@@ -364,7 +364,7 @@
 		<title>GDT Price Index</title>
 		<country>NZD</country>
 		<date><![CDATA[08-04-2026]]></date>
-		<time><![CDATA[2:50pm]]></time>
+		<time><![CDATA[3:14pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[1.5%]]></previous>
@@ -576,7 +576,7 @@
 		<date><![CDATA[08-05-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[-1.5M]]></forecast>
 		<previous><![CDATA[-7.2M]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/10-us-crude-oil-inventories]]></url>
 	</event>
@@ -589,6 +589,16 @@
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/886-us-fomc-member-cook-speaks]]></url>
+	</event>
+	<event>
+		<title>President Trump Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[08-05-2026]]></date>
+		<time><![CDATA[8:30pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/645-us-president-trump-speaks]]></url>
 	</event>
 	<event>
 		<title>FOMC Member Daly Speaks</title>
@@ -756,7 +766,7 @@
 		<date><![CDATA[08-06-2026]]></date>
 		<time><![CDATA[2:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast />
+		<forecast><![CDATA[30B]]></forecast>
 		<previous><![CDATA[28B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
 	</event>
@@ -876,7 +886,7 @@
 		<date><![CDATA[08-07-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[High]]></impact>
-		<forecast><![CDATA[14.8K]]></forecast>
+		<forecast><![CDATA[17.8K]]></forecast>
 		<previous><![CDATA[18.2K]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/67-ca-employment-change]]></url>
 	</event>
@@ -946,7 +956,7 @@
 		<date><![CDATA[08-07-2026]]></date>
 		<time><![CDATA[7:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[11.2B]]></forecast>
+		<forecast><![CDATA[11.4B]]></forecast>
 		<previous><![CDATA[-0.2B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/341-us-consumer-credit-mm]]></url>
 	</event>
