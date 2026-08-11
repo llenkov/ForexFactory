@@ -54,7 +54,7 @@
 		<title>Cleveland Fed Inflation Expectations</title>
 		<country>USD</country>
 		<date><![CDATA[08-10-2026]]></date>
-		<time><![CDATA[1:48pm]]></time>
+		<time><![CDATA[1:45pm]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous><![CDATA[3.7%]]></previous>
@@ -86,7 +86,7 @@
 		<date><![CDATA[08-10-2026]]></date>
 		<time><![CDATA[11:01pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[1.5%]]></forecast>
+		<forecast><![CDATA[1.6%]]></forecast>
 		<previous><![CDATA[1.7%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/114-uk-brc-retail-sales-monitor-yy]]></url>
 	</event>
@@ -156,7 +156,7 @@
 		<date><![CDATA[08-11-2026]]></date>
 		<time><![CDATA[10:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[97.8]]></forecast>
+		<forecast><![CDATA[97.5]]></forecast>
 		<previous><![CDATA[97.4]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/570-us-nfib-small-business-index]]></url>
 	</event>
@@ -246,7 +246,7 @@
 		<date><![CDATA[08-12-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[1.0%]]></forecast>
+		<forecast><![CDATA[0.8%]]></forecast>
 		<previous><![CDATA[-1.7%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/200-ca-building-permits-mm]]></url>
 	</event>
@@ -316,7 +316,7 @@
 		<date><![CDATA[08-12-2026]]></date>
 		<time><![CDATA[6:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-294.6B]]></forecast>
+		<forecast><![CDATA[-361.2B]]></forecast>
 		<previous><![CDATA[-120.3B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/322-us-federal-budget-balance]]></url>
 	</event>
@@ -386,7 +386,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[6:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-0.4%]]></forecast>
+		<forecast><![CDATA[-0.3%]]></forecast>
 		<previous><![CDATA[-0.8%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/599-uk-construction-output-mm]]></url>
 	</event>
@@ -396,7 +396,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[6:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-20.3B]]></forecast>
+		<forecast><![CDATA[-20.6B]]></forecast>
 		<previous><![CDATA[-18.7B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/119-uk-goods-trade-balance]]></url>
 	</event>
@@ -436,7 +436,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[6:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-0.4%]]></forecast>
+		<forecast><![CDATA[-0.3%]]></forecast>
 		<previous><![CDATA[0.7%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/204-uk-prelim-business-investment-qq]]></url>
 	</event>
@@ -456,7 +456,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[6:30am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-0.1%]]></forecast>
+		<forecast><![CDATA[-0.2%]]></forecast>
 		<previous><![CDATA[-0.3%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/96-sz-ppi-mm]]></url>
 	</event>
@@ -476,7 +476,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[8:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[350B]]></forecast>
+		<forecast><![CDATA[50B]]></forecast>
 		<previous><![CDATA[1610B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/477-ch-new-loans]]></url>
 	</event>
@@ -486,7 +486,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[9:00am]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.0%]]></forecast>
+		<forecast><![CDATA[-0.1%]]></forecast>
 		<previous><![CDATA[-0.2%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/220-ez-industrial-production-mm]]></url>
 	</event>
@@ -526,7 +526,7 @@
 		<date><![CDATA[08-13-2026]]></date>
 		<time><![CDATA[12:30pm]]></time>
 		<impact><![CDATA[Medium]]></impact>
-		<forecast><![CDATA[202K]]></forecast>
+		<forecast><![CDATA[203K]]></forecast>
 		<previous><![CDATA[199K]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/11-us-unemployment-claims]]></url>
 	</event>
@@ -716,7 +716,7 @@
 		<date><![CDATA[08-14-2026]]></date>
 		<time><![CDATA[2:00pm]]></time>
 		<impact><![CDATA[Medium]]></impact>
-		<forecast><![CDATA[54.4]]></forecast>
+		<forecast><![CDATA[54.7]]></forecast>
 		<previous><![CDATA[54.4]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/53-us-prelim-uom-consumer-sentiment]]></url>
 	</event>
