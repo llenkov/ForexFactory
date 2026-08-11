@@ -2,10 +2,12 @@ name: Fetch ForexFactory Calendar
 
 on:
   schedule:
-    # Всеки ден в 00:30 UTC (преди бота да публикува в 00:01... виж бележката долу)
-    - cron: "30 0 * * 1"   # Всеки понеделник в 00:30 UTC
-    - cron: "30 0 * * *"   # Всеки ден в 00:30 UTC (за !forex команда)
-  workflow_dispatch:         # Позволява ръчно стартиране от GitHub UI
+    - cron: "0 18 * * 0"   # Всяка неделя в 18:00 UTC (преди новата седмица)
+    - cron: "0 1  * * 1"   # Всеки понеделник в 01:00 UTC (backup)
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   fetch-calendar:
@@ -21,32 +23,60 @@ jobs:
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
             -H "Accept-Language: en-US,en;q=0.9" \
             -H "Referer: https://www.forexfactory.com/" \
-            --retry 3 \
-            --retry-delay 5 \
+            --retry 5 \
+            --retry-delay 10 \
+            --retry-all-errors \
             -o forex_calendar.xml \
             "https://nfs.faireconomy.media/ff_calendar_thisweek.xml"
 
-          echo "--- Размер на файла ---"
+          echo "--- Размер ---"
           wc -c forex_calendar.xml
+          echo "--- Преглед ---"
+          head -c 800 forex_calendar.xml
 
-          echo "--- Първите 500 символа ---"
-          head -c 500 forex_calendar.xml
-
-      - name: Провери дали XML е валиден
+      - name: Провери XML и дати
         run: |
           python3 -c "
           import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone, timedelta
+
           try:
-              tree = ET.parse('forex_calendar.xml')
-              root = tree.getroot()
+              root = ET.parse('forex_calendar.xml').getroot()
               events = root.findall('event')
-              print(f'✅ Валиден XML с {len(events)} събития')
+              print(f'Общо събития: {len(events)}')
+
+              # Вземи датите от XML-а
+              dates = set()
+              for ev in events:
+                  d = ev.findtext('date', '').strip()
+                  if d:
+                      dates.add(d)
+              print(f'Дати в XML: {sorted(dates)}')
+
+              # Провери дали има дати от текущата седмица
+              today = datetime.now(timezone.utc)
+              monday = today - timedelta(days=today.weekday())
+              found_current = False
+              for d in dates:
+                  try:
+                      parsed = datetime.strptime(d, '%b %d, %Y')
+                      if parsed.isocalendar()[1] == monday.isocalendar()[1]:
+                          found_current = True
+                          break
+                  except:
+                      pass
+
+              if found_current:
+                  print('✅ XML съдържа текущата седмица')
+              else:
+                  print('⚠️ ВНИМАНИЕ: XML може да е стар!')
+
           except Exception as e:
-              print(f'❌ Невалиден XML: {e}')
+              print(f'❌ Грешка: {e}')
               exit(1)
           "
 
-      - name: Запази XML в репото
+      - name: Запази в репото
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
