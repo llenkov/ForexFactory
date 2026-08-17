@@ -51,66 +51,6 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/36-jn-prelim-gdp-qq]]></url>
 	</event>
 	<event>
-		<title>New Home Prices m/m</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[1:30am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[-0.15%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/902-ch-new-home-prices-mm]]></url>
-	</event>
-	<event>
-		<title>Fixed Asset Investment ytd/y</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[2:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[-6.2%]]></forecast>
-		<previous><![CDATA[-5.7%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/458-ch-fixed-asset-investment-ytdy]]></url>
-	</event>
-	<event>
-		<title>Industrial Production y/y</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[2:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[5.0%]]></forecast>
-		<previous><![CDATA[5.3%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/453-ch-industrial-production-yy]]></url>
-	</event>
-	<event>
-		<title>NBS Press Conference</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[2:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous />
-		<url><![CDATA[https://www.forexfactory.com/calendar/469-ch-nbs-press-conference]]></url>
-	</event>
-	<event>
-		<title>Retail Sales y/y</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[2:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[1.5%]]></forecast>
-		<previous><![CDATA[1.0%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/470-ch-retail-sales-yy]]></url>
-	</event>
-	<event>
-		<title>Unemployment Rate</title>
-		<country>CNY</country>
-		<date><![CDATA[08-17-2026]]></date>
-		<time><![CDATA[2:00am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[5.1%]]></forecast>
-		<previous><![CDATA[5.0%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/771-ch-unemployment-rate]]></url>
-	</event>
-	<event>
 		<title>Revised Industrial Production m/m</title>
 		<country>JPY</country>
 		<date><![CDATA[08-17-2026]]></date>
@@ -139,6 +79,66 @@
 		<forecast />
 		<previous><![CDATA[-5.0%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/457-ch-foreign-direct-investment-ytdy]]></url>
+	</event>
+	<event>
+		<title>Fixed Asset Investment ytd/y</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[-6.2%]]></forecast>
+		<previous><![CDATA[-5.7%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/458-ch-fixed-asset-investment-ytdy]]></url>
+	</event>
+	<event>
+		<title>Industrial Production y/y</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[5.0%]]></forecast>
+		<previous><![CDATA[5.3%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/453-ch-industrial-production-yy]]></url>
+	</event>
+	<event>
+		<title>NBS Press Conference</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/469-ch-nbs-press-conference]]></url>
+	</event>
+	<event>
+		<title>New Home Prices m/m</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous><![CDATA[-0.15%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/902-ch-new-home-prices-mm]]></url>
+	</event>
+	<event>
+		<title>Retail Sales y/y</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[1.5%]]></forecast>
+		<previous><![CDATA[1.0%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/470-ch-retail-sales-yy]]></url>
+	</event>
+	<event>
+		<title>Unemployment Rate</title>
+		<country>CNY</country>
+		<date><![CDATA[08-17-2026]]></date>
+		<time><![CDATA[7:00am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast><![CDATA[5.1%]]></forecast>
+		<previous><![CDATA[5.0%]]></previous>
+		<url><![CDATA[https://www.forexfactory.com/calendar/771-ch-unemployment-rate]]></url>
 	</event>
 	<event>
 		<title>CPI m/m</title>
