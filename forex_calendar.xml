@@ -857,7 +857,7 @@
 		<time><![CDATA[9:03am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[3.54|2.4]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/525-sp-10-y-bond-auction]]></url>
 	</event>
 	<event>
@@ -867,7 +867,7 @@
 		<time><![CDATA[9:18am]]></time>
 		<impact><![CDATA[Low]]></impact>
 		<forecast />
-		<previous />
+		<previous><![CDATA[3.86|3.7]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/523-fr-10-y-bond-auction]]></url>
 	</event>
 	<event>
@@ -979,6 +979,26 @@
 		<forecast />
 		<previous><![CDATA[15B]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/26-us-natural-gas-storage]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Hammack Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[09-03-2026]]></date>
+		<time><![CDATA[7:00pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/913-us-fomc-member-hammack-speaks]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Goolsbee Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[09-03-2026]]></date>
+		<time><![CDATA[7:05pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/889-us-fomc-member-goolsbee-speaks]]></url>
 	</event>
 	<event>
 		<title>Household Spending y/y</title>
