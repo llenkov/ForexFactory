@@ -151,6 +151,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/299-uk-cb-leading-index-mm]]></url>
 	</event>
 	<event>
+		<title>ECB President Lagarde Speaks</title>
+		<country>EUR</country>
+		<date><![CDATA[09-14-2026]]></date>
+		<time><![CDATA[3:15pm]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/832-ez-ecb-president-lagarde-speaks]]></url>
+	</event>
+	<event>
 		<title>New Home Prices m/m</title>
 		<country>CNY</country>
 		<date><![CDATA[09-15-2026]]></date>
@@ -596,7 +606,7 @@
 		<date><![CDATA[09-16-2026]]></date>
 		<time><![CDATA[6:00pm]]></time>
 		<impact><![CDATA[High]]></impact>
-		<forecast><![CDATA[3.75%]]></forecast>
+		<forecast><![CDATA[4.00%]]></forecast>
 		<previous><![CDATA[3.75%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/1-us-federal-funds-rate]]></url>
 	</event>
@@ -931,6 +941,36 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/218-ez-current-account]]></url>
 	</event>
 	<event>
+		<title>Eurogroup Meetings</title>
+		<country>EUR</country>
+		<date><![CDATA[09-18-2026]]></date>
+		<time><![CDATA[10:15am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/562-ez-eurogroup-meetings]]></url>
+	</event>
+	<event>
+		<title>ECOFIN Meetings</title>
+		<country>EUR</country>
+		<date><![CDATA[09-18-2026]]></date>
+		<time><![CDATA[10:15am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/504-ez-ecofin-meetings]]></url>
+	</event>
+	<event>
+		<title>ECB President Lagarde Speaks</title>
+		<country>EUR</country>
+		<date><![CDATA[09-18-2026]]></date>
+		<time><![CDATA[10:30am]]></time>
+		<impact><![CDATA[Medium]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/832-ez-ecb-president-lagarde-speaks]]></url>
+	</event>
+	<event>
 		<title>Capacity Utilization Rate</title>
 		<country>USD</country>
 		<date><![CDATA[09-18-2026]]></date>
@@ -969,5 +1009,25 @@
 		<forecast><![CDATA[0.2%]]></forecast>
 		<previous><![CDATA[0.2%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/297-us-cb-leading-index-mm]]></url>
+	</event>
+	<event>
+		<title>FOMC Member Schmid Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[09-18-2026]]></date>
+		<time><![CDATA[3:45pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/912-us-fomc-member-schmid-speaks]]></url>
+	</event>
+	<event>
+		<title>ECOFIN Meetings</title>
+		<country>EUR</country>
+		<date><![CDATA[09-19-2026]]></date>
+		<time><![CDATA[10:15am]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/504-ez-ecofin-meetings]]></url>
 	</event>
 </weeklyevents>
