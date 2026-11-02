@@ -51,16 +51,6 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/274-jn-final-manufacturing-pmi]]></url>
 	</event>
 	<event>
-		<title>ANZ Job Advertisements m/m</title>
-		<country>AUD</country>
-		<date><![CDATA[11-02-2026]]></date>
-		<time><![CDATA[12:45am]]></time>
-		<impact><![CDATA[Low]]></impact>
-		<forecast />
-		<previous><![CDATA[2.2%]]></previous>
-		<url><![CDATA[https://www.forexfactory.com/calendar/234-au-anz-job-advertisements-mm]]></url>
-	</event>
-	<event>
 		<title>RatingDog Manufacturing PMI</title>
 		<country>CNY</country>
 		<date><![CDATA[11-02-2026]]></date>
@@ -206,7 +196,7 @@
 		<date><![CDATA[11-02-2026]]></date>
 		<time><![CDATA[3:00pm]]></time>
 		<impact><![CDATA[Medium]]></impact>
-		<forecast><![CDATA[54.7]]></forecast>
+		<forecast><![CDATA[54.5]]></forecast>
 		<previous><![CDATA[54.5]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/252-us-ism-manufacturing-pmi]]></url>
 	</event>
@@ -216,7 +206,7 @@
 		<date><![CDATA[11-02-2026]]></date>
 		<time><![CDATA[3:00pm]]></time>
 		<impact><![CDATA[Low]]></impact>
-		<forecast><![CDATA[0.3%]]></forecast>
+		<forecast><![CDATA[0.4%]]></forecast>
 		<previous><![CDATA[0.9%]]></previous>
 		<url><![CDATA[https://www.forexfactory.com/calendar/205-us-construction-spending-mm]]></url>
 	</event>
