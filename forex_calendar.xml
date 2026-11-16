@@ -221,6 +221,16 @@
 		<url><![CDATA[https://www.forexfactory.com/calendar/129-us-fed-chairman-warsh-speaks]]></url>
 	</event>
 	<event>
+		<title>FOMC Member Hammack Speaks</title>
+		<country>USD</country>
+		<date><![CDATA[11-16-2026]]></date>
+		<time><![CDATA[7:15pm]]></time>
+		<impact><![CDATA[Low]]></impact>
+		<forecast />
+		<previous />
+		<url><![CDATA[https://www.forexfactory.com/calendar/913-us-fomc-member-hammack-speaks]]></url>
+	</event>
+	<event>
 		<title>RBNZ Financial Stability Report</title>
 		<country>NZD</country>
 		<date><![CDATA[11-16-2026]]></date>
@@ -625,7 +635,7 @@
 		<country>GBP</country>
 		<date><![CDATA[11-18-2026]]></date>
 		<time><![CDATA[7:30am]]></time>
-		<impact><![CDATA[High]]></impact>
+		<impact><![CDATA[Medium]]></impact>
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/838-uk-boe-gov-bailey-speaks]]></url>
@@ -1125,7 +1135,7 @@
 		<country>USD</country>
 		<date><![CDATA[11-20-2026]]></date>
 		<time><![CDATA[1:25pm]]></time>
-		<impact><![CDATA[Medium]]></impact>
+		<impact><![CDATA[Low]]></impact>
 		<forecast />
 		<previous />
 		<url><![CDATA[https://www.forexfactory.com/calendar/839-us-fomc-member-waller-speaks]]></url>
